@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="Domain.fs" />
+      <Compile Include="Application\Dto.fs" />
+      <Compile Include="Application\Commands.fs" />
+      <Compile Include="Application\Queries.fs" />
+      <Compile Include="Application\Events.fs" />
+      <Compile Include="Application\CommandHandlers.fs" />
+      <Compile Include="Application\QueryHandlers.fs" />
+      <Compile Include="Infrastructure.fs" />
+      <Compile Include="Context.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FSharp.UMX" Version="1.1.0" />
+      <PackageReference Include="MongoDB.Driver" Version="2.19.2" />
+      <PackageReference Include="Ulid" Version="1.2.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FSharp.Common\FSharp.Common.fsproj" />
+    </ItemGroup>
+
+</Project>
